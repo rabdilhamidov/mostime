@@ -1,0 +1,138 @@
+.wide-form {
+  background-color: #ffffff;
+  border-bottom: 1px solid #cecece;
+  height: 100%;
+  padding: 0 20px 35px 20px;
+  position: relative;
+}
+
+  .wide-form .header {
+    background: #e3e3e3 url(../images/arrow.png) no-repeat 20px 18px;
+    font: bold 14px/43px 'PT Sans';
+    padding: 0 20px 0 31px;
+    margin: 0 -20px;
+  }
+
+  .wide-form .legend, .wide-form .legend-bottom {
+    font-size: 13px;
+    padding: 10px 0px;
+  }
+
+  .wide-form .legend-bottom {
+    border-top: 1px solid #cecece;
+    padding-top: 12px;
+  }
+
+  .wide-form .legend-bottom dl {
+    font-size: 12px;
+  }
+
+    .wide-form .legend-bottom dl dt {
+      float: left;
+      font-weight: bold;
+    }
+
+    .wide-form .legend-bottom dl dd {
+      margin-left: 68px;
+      width: 620px;
+    }
+
+  .wide-form .form {
+    overflow: hidden;
+    padding-bottom: 20px;
+  }
+
+  .wide-form .form .row {
+    overflow: hidden;
+  }
+
+  .wide-form .form .row:first-child {
+    border-top: 1px solid #cecece;
+    padding-top: 18px;
+  }
+
+  .wide-form .form .row + .row {
+    margin-top: 18px;
+  }
+
+  .wide-form .form .row dl + dl {
+    margin-left: 48px;
+  }
+
+  .wide-form .form .row dl + dl + dl {
+    float: right;
+    margin-left: 0;
+  }
+
+    .wide-form .form dl {
+      display: inline-block;
+    }
+
+      .wide-form .form dl dt {
+        line-height: 1;
+        padding-bottom: 5px;
+      }
+
+      .wide-form .form dl dd {
+      }
+
+  .wide-form .buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+  }
+
+/* ----------------------------------- general styles */
+
+input[type="submit"] {
+  border: none;
+}
+
+input[type="text"], input[type="password"], select {
+  border: 1px solid #828080;
+  font-size: 14px;
+  line-height: 1;
+  padding: 6px 0;
+  width: 278px;
+}
+
+select {
+  padding: 5px 0;
+  width: 280px;
+}
+
+.button {
+  background-color: #828080;
+  color: #ffffff;
+  font: bold 14px/40px 'PT Sans';
+  display: inline-block;
+  padding: 0 24px 0 34px;
+  text-decoration: none;
+}
+
+  .button:hover {
+    background-color: #686868;
+  }
+
+  .button span {
+    padding-right: 12px;
+  }
+
+  .button.disabled, .button.disabled:hover {
+    background-color: #d3d3d3 !important;
+    cursor: default;
+  }
+
+  .button.next {
+    padding-right: 34px;
+  }
+
+    .button.next span {
+      background: url(../images/button_arrow.png) no-repeat right center;
+    }
+
+.auth-form {}
+
+  .auth-form .row + .row {
+    margin-top: 10px;
+  }
