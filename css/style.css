@@ -8,10 +8,45 @@ a {
   color: #828080;
   text-decoration: none; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none; }
   a:active, a:focus {
     border: 0 none;
     outline: 0 none; }
+  a:before {
+    content: ' '; }
+  a.back:before {
+    background-position: -5px -158px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    background-image: url('../images/sprite.png');
+    margin-right: 10px; }
+  a.pdf:before {
+    background-position: -5px -177px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-image: url('../images/sprite.png');
+    vertical-align: middle; }
+  a.word:before {
+    background-position: -5px -366px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: inline-block;
+    width: 27px;
+    height: 27px;
+    background-image: url('../images/sprite.png');
+    vertical-align: middle; }
+  a.frame-btn {
+    background-color: #828080;
+    font-size: 13px;
+    line-height: 13px;
+    padding: 5px 14px;
+    color: #fff; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -32,9 +67,108 @@ ul {
     height: 40px;
     background: #e3e3e3;
     font-weight: bold;
-    font-size: 14px; }
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 10px; }
+    .frame .title .left {
+      display: inline-block;
+      border-right: 1px solid #fff;
+      padding-right: 30px;
+      padding-top: 9px;
+      height: 100%; }
+    .frame .title .right {
+      display: inline-block;
+      float: right; }
+      .frame .title .right li:last-child a {
+        padding-right: 0; }
+    .frame .title ul li {
+      display: inline-block;
+      vertical-align: top;
+      height: 40px;
+      border-left: 1px solid #fff;
+      text-align: center;
+      margin-left: -4px; }
+      .frame .title ul li a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px; }
+        .frame .title ul li a.pdf, .frame .title ul li a.word {
+          padding: 7px 10px 0; }
   .frame .content {
     margin-top: 40px; }
+    .frame .content .head-block {
+      border-bottom: 1px solid #e3e3e3;
+      padding-bottom: 6px; }
+      .frame .content .head-block h3 {
+        font-size: 15px;
+        font-weight: normal; }
+      .frame .content .head-block .left {
+        display: inline-block;
+        width: 85%; }
+      .frame .content .head-block .right {
+        display: inline-block;
+        margin-top: 5px;
+        float: right; }
+    .frame .content .text {
+      margin-top: 7px; }
+  .frame .info-line {
+    font-style: italic;
+    color: #8a8a8a;
+    margin-top: 3px; }
+    .frame .info-line span {
+      display: inline-block; }
+      .frame .info-line span.time:before {
+        content: ' ';
+        background-position: -5px -75px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-image: url('../images/sprite.png');
+        vertical-align: -2px;
+        margin-right: 5px; }
+      .frame .info-line span.date {
+        margin-left: 20px; }
+        .frame .info-line span.date:before {
+          content: ' ';
+          background-position: -5px -24px;
+          background-repeat: no-repeat;
+          overflow: hidden;
+          display: inline-block;
+          width: 13px;
+          height: 17px;
+          background-image: url('../images/sprite.png');
+          vertical-align: -2px;
+          margin-right: 5px; }
+    .frame .info-line address {
+      margin-left: 20px;
+      display: inline-block; }
+  .frame address {
+    padding: 4px 10px;
+    font-style: italic;
+    color: #8a8a8a; }
+    .frame address:before {
+      content: ' ';
+      background-position: -5px -51px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: inline-block;
+      width: 11px;
+      height: 14px;
+      background-image: url('../images/sprite.png');
+      margin-right: 5px;
+      vertical-align: -2px; }
+  .frame .intends {
+    padding-left: 20px;
+    padding-right: 20px; }
+  .frame .flags {
+    width: 26px;
+    height: 16px;
+    display: block; }
+    .frame .flags img {
+      width: 100%;
+      border: 1px solid #e3e3e3; }
   .frame .pager {
     margin-top: 20px;
     text-align: center; }
@@ -49,7 +183,7 @@ ul {
       .frame .pager ul li.first {
         border: 1px solid #e3e3e3; }
         .frame .pager ul li.first a {
-          background-position: -5px -74px;
+          background-position: -5px -101px;
           background-repeat: no-repeat;
           overflow: hidden;
           display: inline-block;
@@ -61,7 +195,7 @@ ul {
         border: 1px solid #e3e3e3;
         margin-right: 10px; }
         .frame .pager ul li.prev a {
-          background-position: -5px -131px;
+          background-position: -5px -158px;
           background-repeat: no-repeat;
           overflow: hidden;
           display: inline-block;
@@ -73,7 +207,7 @@ ul {
         border: 1px solid #e3e3e3;
         margin-left: 10px; }
         .frame .pager ul li.next a {
-          background-position: -5px -112px;
+          background-position: -5px -139px;
           background-repeat: no-repeat;
           overflow: hidden;
           display: inline-block;
@@ -84,7 +218,7 @@ ul {
       .frame .pager ul li.last {
         border: 1px solid #e3e3e3; }
         .frame .pager ul li.last a {
-          background-position: -5px -93px;
+          background-position: -5px -120px;
           background-repeat: no-repeat;
           overflow: hidden;
           display: inline-block;
@@ -104,22 +238,14 @@ ul {
 
 .frame .title ul {
   text-align: center; }
-  .frame .title ul li {
-    display: inline-block;
-    width: 170px;
-    height: 40px;
-    border-left: 1px solid #fff;
-    text-align: center;
-    padding-top: 9px;
-    margin-left: -4px; }
-    .frame .title ul li:last-child {
+  .frame .title ul.dates li {
+    width: 170px; }
+    .frame .title ul.dates li:last-child {
       border-right: 1px solid #fff; }
-    .frame .title ul li a {
-      text-decoration: none;
-      display: inline-block;
-      padding-bottom: 10px;
-      width: 150px; }
-      .frame .title ul li a:hover, .frame .title ul li a.active {
+    .frame .title ul.dates li a {
+      width: 150px;
+      padding-bottom: 10px; }
+      .frame .title ul.dates li a:hover, .frame .title ul.dates li a.active {
         border-bottom: 3px solid #606060; }
 .frame .time-period {
   margin-top: 20px; }
@@ -131,7 +257,7 @@ ul {
     text-align: center; }
     .frame .time-period h3:before {
       content: ' ';
-      background-position: -5px -48px;
+      background-position: -5px -75px;
       background-repeat: no-repeat;
       overflow: hidden;
       display: inline-block;
@@ -153,21 +279,7 @@ ul {
       padding: 10px 10px 8px;
       min-height: 64px; }
     .frame .time-period .info-block address {
-      padding: 4px 10px;
-      font-style: italic;
-      border-top: 1px solid #e3e3e3;
-      color: #8a8a8a; }
-      .frame .time-period .info-block address:before {
-        content: ' ';
-        background-position: -5px -24px;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        display: inline-block;
-        width: 11px;
-        height: 14px;
-        background-image: url('../images/sprite.png');
-        margin-right: 5px;
-        vertical-align: -2px; }
+      border-top: 1px solid #e3e3e3; }
   .frame .time-period.two-columns .info-block {
     display: inline-block;
     width: 48%; }
@@ -181,12 +293,32 @@ ul {
       margin-left: 3%; }
     .frame .time-period.three-columns .info-block:last-child {
       float: right; }
+
+.frame .person {
+  width: 156px;
+  padding: 20px 10px 10px; }
+  .frame .person .person-photo {
+    width: 135px; }
+    .frame .person .person-photo img {
+      border: 1px solid #e3e3e3;
+      width: 100%; }
+    .frame .person .person-photo:hover {
+      background: #e3e3e3; }
+  .frame .person .person-text {
+    width: 135px;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 5px; }
+    .frame .person .person-text h4 {
+      margin: 3px 0 2px; }
+  .frame .person:hover {
+    background: #e3e3e3; }
+
 .frame .content-slider {
   margin: 0 40px; }
 .frame .slider-arrows {
   position: absolute;
   top: 50%;
-  margin-top: -140px;
   width: 800px; }
   .frame .slider-arrows a {
     display: inline-block;
@@ -200,7 +332,7 @@ ul {
     .frame .slider-arrows a:hover {
       background-color: #828080; }
     .frame .slider-arrows a.prev:before {
-      background-position: -5px -150px;
+      background-position: -5px -214px;
       background-repeat: no-repeat;
       overflow: hidden;
       display: inline-block;
@@ -208,7 +340,7 @@ ul {
       height: 28px;
       background-image: url('../images/sprite.png'); }
     .frame .slider-arrows a.prev:hover:before {
-      background-position: -5px -188px;
+      background-position: -5px -252px;
       background-repeat: no-repeat;
       overflow: hidden;
       display: inline-block;
@@ -218,7 +350,7 @@ ul {
     .frame .slider-arrows a.next {
       float: right; }
       .frame .slider-arrows a.next:before {
-        background-position: -5px -226px;
+        background-position: -5px -290px;
         background-repeat: no-repeat;
         overflow: hidden;
         display: inline-block;
@@ -226,10 +358,18 @@ ul {
         height: 28px;
         background-image: url('../images/sprite.png'); }
       .frame .slider-arrows a.next:hover:before {
-        background-position: -5px -264px;
+        background-position: -5px -328px;
         background-repeat: no-repeat;
         overflow: hidden;
         display: inline-block;
         width: 12px;
         height: 28px;
         background-image: url('../images/sprite.png'); }
+.frame .content-slider + .slider-arrows {
+  margin-top: -140px; }
+.frame .person-slider {
+  position: relative;
+  z-index: 1;
+  margin: 30px 20px 0; }
+  .frame .person-slider + .slider-arrows {
+    margin-top: -64px; }
