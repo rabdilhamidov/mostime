@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Время московское</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="vendor/main.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="vendor/pages.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="vendor/forms.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection">
+
+    <script type="text/javascript" src="vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/main_ra.js"></script>
+</head>
+
+<body>
+<div class="frame">
+  <div class="title">
+    <div class="left no-border">
+      <div class="search-wrapper">
+        <input placeholder="Поиск" type="search">
+      </div>
+    </div>
+    <div class="right dark">
+      <a href="#" id="create-new-mess">Написать сообщение</a>
+    </div>    
+  </div>
+
+  <div class="content">
+    <ul class="messages">
+      <li>
+        <div class="left">
+          <div class="avatar"><img src="images/avatar-01.jpg" alt="avatar"></div>
+          <div class="text">
+            <h3>Леонид Казинец</h3>
+            <p>Привет! Как дела? Жду тебя на форуме, нужно кое-что обсудить. Когда приезжаешь?</p>
+          </div>
+        </div>
+        <div class="right">
+          <span class="date">Сент 01, 2014</span>
+        </div>
+      </li>
+      <li>
+        <div class="left">
+          <div class="avatar"><img src="images/avatar-01.jpg" alt="avatar"></div>
+          <div class="text">
+            <h3>Леонид Казинец</h3>
+            <p>Привет! Как дела? Жду тебя на форуме, нужно кое-что обсудить. Когда приезжаешь?</p>
+          </div>
+        </div>
+        <div class="right">
+          <span class="date">Сент 01, 2014</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="pager">
+    <ul>
+      <li class="first"><a href="#"></a></li>
+      <li class="prev"><a href="#"></a></li>
+      <li class="page active"><a href="#">1</a></li>
+      <li class="page"><a href="#">2</a></li>
+      <li class="page"><a href="#">3</a></li>
+      <li class="next"><a href="#"></a></li>
+      <li class="last"><a href="#"></a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="overlay"></div>
+<div class="frame popup" id="new-mess">
+  <div class="popup-title">
+    <div class="left">
+      <h4>Новое сообщение</h4>
+    </div>
+    <div class="right">
+      <a href="#" class="popup-close">Закрыть</a>
+    </div>
+  </div>
+  <form id="new-mess" action="">
+    <div class="popup-content">
+        <ul>
+          <li>
+            <label for="who">Кому</label>
+            <input id="who" name="who" type="text" placeholder="" value="">
+            <span class="err">Необходимо ввести корректный текст</span>
+          </li>
+          <li>
+            <label for="mess">Ваше сообщение</label>
+            <textarea name="mess" id="mess" cols="30" rows="10" placeholder=""></textarea>
+            <span class="err">Поле обязательно для заполнения</span>
+          </li>
+        </ul>
+    </div>
+    <div class="popup-footer">
+      <div class="left">
+        <a href="#" class="load-file">Прикрепить файл</a>
+        <input type="file">
+        <span class="loaded-file"></span>
+      </div>
+      <div class="right">
+        <button type="submit">Отправить</button>
+      </div>    
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
