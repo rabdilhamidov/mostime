@@ -620,3 +620,5 @@ ul {
     border-top: 1px solid #e3e3e3;
     margin-top: 20px;
     padding: 20px 20px; }
+    .popup .popup-footer .left {
+      width: 270px; }
