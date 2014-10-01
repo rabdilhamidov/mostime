@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Время московское</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <link rel="stylesheet" href="vendor/main.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="vendor/pages.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="vendor/forms.css" type="text/css" media="screen, projection">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection">
+
+    <script type="text/javascript" src="vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="vendor/zebra_datepicker.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery.timepicker.min.js"></script>
+    <script type="text/javascript" src="js/main_ra.js"></script>
+    <script type="text/javascript" src="js/form_new_meeting.js"></script>
+</head>
+
+<body>
+<div class="frame">
+  <div class="title">
+    <ul class="dates schedule">
+      <li><a href="#" class="active">17 Сентября</a></li>
+      <li><a href="#">18 Сентября</a></li>
+      <li><a href="#">19 Сентября</a></li>
+    </ul>
+    <div class="right dark">
+      <a href="#" id="create-new-meeting">Назначить встречу</a>
+    </div>   
+  </div>
+
+  <div class="content intends">
+    <table cols="3" cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Время</th>
+          <th>Название</th>
+          <th>Место</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10:00</td>
+          <td>Новые способы добычи углеводов. Потенциал использования в России.</td>
+          <td>павильйон №2, Стенд №3</td>
+        </tr>
+        <tr>
+          <td>11:00</td>
+          <td>Новые способы добычи углеводов. Потенциал использования в России.</td>
+          <td>павильйон №2, Стенд №3</td>
+        </tr>
+        <tr>
+          <td>12:00</td>
+          <td>Новые способы добычи углеводов. Потенциал использования в России.</td>
+          <td>павильйон №2, Стенд №3</td>
+        </tr>
+        <tr>
+          <td>12:00</td>
+          <td>Новые способы добычи углеводов. Потенциал использования в России.</td>
+          <td>павильйон №2, Стенд №3</td>
+        </tr>
+        <tr>
+          <td>12:00</td>
+          <td>Новые способы добычи углеводов. Потенциал использования в России.</td>
+          <td>павильйон №2, Стенд №3</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="overlay"></div>
+<div class="frame popup" id="new-meeting">
+  <div class="popup-title">
+    <div class="left">
+      <h4>Назначить встречу</h4>
+    </div>
+    <div class="right">
+      <a href="#" class="popup-close">Закрыть</a>
+    </div>
+  </div>
+  <form id="new-meeting-form" action="">
+    <div class="popup-content">
+        <ul>
+          <li>
+            <label for="name">Название</label>
+            <input id="name" name="name" type="text" placeholder="" value="">
+            <span class="err">Необходимо ввести корректный текст</span>
+          </li>
+          <li>
+            <label for="place">Место</label>
+            <input id="place" name="place" type="text" placeholder="" value="">
+            <span class="err">Необходимо ввести корректный текст</span>
+          </li>
+          <li>
+            <label for="time">Дата</label>
+            <input id="date" name="date" type="text" placeholder="" value="">
+          </li>
+          <li>
+            <label for="time">Время</label>
+              с&ensp;<input class="timepicker" id="time-from" name="time-from" type="text" data-time-format="H:i" placeholder="" value=":">&emsp;
+              по&ensp;<input class="timepicker" id="time-from" name="time-from" type="text" data-time-format="H:i" placeholder="" value=":">
+          </li>
+          <li>
+              <label for="members">Участники</label>
+              <div class="search-wrapper">
+                <input id="members" placeholder="Поиск" type="search">
+                <div class="search-result">
+                  <div class="avatar"><img src="images/avatar-01.jpg" alt="avatar"></div>
+                  <p>Леонид Матвеевич Казанцев</p>
+                  <a href="#" class="big-close"></a>
+                </div>
+              </div>
+          </li>
+          <li>
+            <label for="comment">Комментарий</label>
+            <textarea name="comment" id="comment" cols="30" rows="10" placeholder=""></textarea>
+            <span class="err">Поле обязательно для заполнения</span>
+          </li>
+        </ul>
+    </div>
+    <div class="popup-footer">      
+      <div class="right">
+        <button type="submit">Создать</button>
+      </div>    
+    </div>
+  </form>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
