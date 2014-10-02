@@ -47,7 +47,7 @@ input[type=checkbox], input[type=radio] {
       vertical-align: middle; }
 
 input[type=checkbox] + label:before {
-  background-position: -5px -487px;
+  background-position: -5px -508px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -64,7 +64,7 @@ input[type=checkbox]:checked + label:before {
   background-image: url('../images/sprite.png'); }
 
 input[type=radio] + label:before {
-  background-position: -5px -513px;
+  background-position: -5px -534px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -72,7 +72,7 @@ input[type=radio] + label:before {
   height: 14px;
   background-image: url('../images/sprite.png'); }
 input[type=radio]:checked + label:before {
-  background-position: -5px -286px;
+  background-position: -5px -307px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -85,7 +85,7 @@ input[type=text]#start-date, input[type=text]#end-date {
 
 input[type=search]:before {
   content: ' ';
-  background-position: -5px -310px;
+  background-position: -5px -331px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -102,7 +102,7 @@ input[type=search]:before {
   position: relative; }
   .search-wrapper:before {
     content: ' ';
-    background-position: -5px -310px;
+    background-position: -5px -331px;
     background-repeat: no-repeat;
     overflow: hidden;
     display: inline-block;
@@ -151,7 +151,7 @@ a {
     background-image: url('../images/sprite.png');
     vertical-align: middle; }
   a.word:before {
-    background-position: -5px -537px;
+    background-position: -5px -558px;
     background-repeat: no-repeat;
     overflow: hidden;
     display: inline-block;
@@ -181,7 +181,7 @@ a {
     background-color: #f4f4f4;
     padding: 5px 5px 7px; }
     a.big-close:before {
-      background-position: -5px -574px;
+      background-position: -5px -595px;
       background-repeat: no-repeat;
       overflow: hidden;
       display: inline-block;
@@ -215,7 +215,7 @@ a.frame-btn, button {
     .frame .slider-arrows a:hover {
       background-color: #828080; }
     .frame .slider-arrows a.prev:before {
-      background-position: -5px -335px;
+      background-position: -5px -356px;
       background-repeat: no-repeat;
       overflow: hidden;
       display: inline-block;
@@ -223,7 +223,7 @@ a.frame-btn, button {
       height: 28px;
       background-image: url('../images/sprite.png'); }
     .frame .slider-arrows a.prev:hover:before {
-      background-position: -5px -373px;
+      background-position: -5px -394px;
       background-repeat: no-repeat;
       overflow: hidden;
       display: inline-block;
@@ -233,7 +233,7 @@ a.frame-btn, button {
     .frame .slider-arrows a.next {
       float: right; }
       .frame .slider-arrows a.next:before {
-        background-position: -5px -411px;
+        background-position: -5px -432px;
         background-repeat: no-repeat;
         overflow: hidden;
         display: inline-block;
@@ -241,7 +241,7 @@ a.frame-btn, button {
         height: 28px;
         background-image: url('../images/sprite.png'); }
       .frame .slider-arrows a.next:hover:before {
-        background-position: -5px -449px;
+        background-position: -5px -470px;
         background-repeat: no-repeat;
         overflow: hidden;
         display: inline-block;
@@ -413,7 +413,8 @@ ul {
     .frame .flags img {
       width: 100%; }
   .frame img {
-    border: 1px solid #e3e3e3; }
+    border: 1px solid #e3e3e3;
+    margin-top: 0; }
   .frame .pager {
     margin-top: 20px;
     text-align: center; }
@@ -483,6 +484,8 @@ ul {
   .frame .err {
     color: red;
     font-size: smaller; }
+  .frame .clx {
+    clear: both; }
 
 .frame .title ul {
   text-align: center; }
@@ -593,6 +596,7 @@ ul {
       font-size: 11px; }
 
 .overlay {
+  display: none;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -601,6 +605,7 @@ ul {
   z-index: 2; }
 
 .popup {
+  display: none;
   position: fixed;
   top: 40px;
   left: 50%;
@@ -626,19 +631,19 @@ ul {
         height: 9px;
         background-image: url('../images/sprite.png');
         margin-right: 10px; }
-    .popup .popup-title a {
-      color: #606060; }
-      .popup .popup-title a.popup-close:after {
-        content: '';
-        background-position: -5px -265px;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        display: inline-block;
-        width: 11px;
-        height: 11px;
-        background-image: url('../images/sprite.png');
-        vertical-align: -2px;
-        margin-left: 10px; }
+  .popup a {
+    color: #606060; }
+    .popup a.popup-close:after {
+      content: '';
+      background-position: -5px -265px;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      display: inline-block;
+      width: 11px;
+      height: 11px;
+      background-image: url('../images/sprite.png');
+      vertical-align: -2px;
+      margin-left: 10px; }
   .popup .popup-content {
     padding: 10px 20px 0; }
     .popup .popup-content ul li {
@@ -667,11 +672,12 @@ ul {
   .popup .search-wrapper {
     display: inline-block;
     width: 281px; }
-  .popup .search-result {
-    margin-top: 40px;
+  .popup .search-result ul li {
+    margin-top: 50px;
+    margin-left: 120px;
     height: 45px;
     border-bottom: 1px solid #e3e3e3; }
-    .popup .search-result .avatar {
+    .popup .search-result ul li .avatar {
       margin-top: 0px !important;
       width: 35px;
       height: 35px;
@@ -679,14 +685,45 @@ ul {
       display: inline-block;
       float: left;
       margin-right: 10px; }
-      .popup .search-result .avatar img {
+      .popup .search-result ul li .avatar img {
         width: 100%;
         margin-top: 0; }
-    .popup .search-result p {
+    .popup .search-result ul li p {
       display: inline-block;
       margin-top: 7px; }
-    .popup .search-result a.big-close {
+    .popup .search-result ul li a.big-close {
       float: right; }
+  .popup#afisha-detail {
+    width: 660px;
+    margin-left: -330px;
+    background-color: #e3e3e3;
+    padding-top: 10px; }
+    .popup#afisha-detail .popup-content {
+      vertical-align: top; }
+      .popup#afisha-detail .popup-content .left {
+        float: left;
+        display: inline-block;
+        width: 200px; }
+        .popup#afisha-detail .popup-content .left img {
+          width: 100%; }
+      .popup#afisha-detail .popup-content .right {
+        display: inline-block;
+        width: 400px; }
+        .popup#afisha-detail .popup-content .right h3 {
+          font-size: 20px; }
+    .popup#afisha-detail .info-line {
+      border-bottom: 1px solid #bababa; }
+      .popup#afisha-detail .info-line address {
+        margin-left: -10px;
+        margin-right: 15px; }
+      .popup#afisha-detail .info-line span {
+        margin-right: 15px;
+        margin-left: 0px; }
+    .popup#afisha-detail .afisha-text {
+      margin-top: 10px; }
+    .popup#afisha-detail .popup-footer {
+      border-top: 1px solid #bababa;
+      padding-top: 10px; }
 
 .frame ul.messages.chat li .avatar {
   width: 43px;
@@ -973,3 +1010,54 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
 
 .ui-timepicker-list li.ui-timepicker-disabled:hover, .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
   background: #f2f2f2; }
+
+.frame .afisha {
+  width: 180px;
+  padding-bottom: 5px;
+  margin-bottom: 45px;
+  border-bottom: 1px solid #e3e3e3;
+  display: inline-block;
+  margin-right: 11%;
+  vertical-align: top; }
+  .frame .afisha:nth-child(3n) {
+    margin-right: 0px; }
+  .frame .afisha .afisha-photo {
+    height: 120px;
+    overflow: hidden; }
+    .frame .afisha .afisha-photo img {
+      width: 100%; }
+    .frame .afisha .afisha-photo .afisha-detail {
+      width: 180px;
+      height: 120px;
+      background: rgba(130, 130, 130, 0.7);
+      margin-top: -124px;
+      position: relative;
+      text-align: center;
+      padding-top: 50px;
+      cursor: pointer;
+      display: none; }
+      .frame .afisha .afisha-photo .afisha-detail a {
+        color: #fff;
+        text-decoration: underline; }
+        .frame .afisha .afisha-photo .afisha-detail a:after {
+          content: '';
+          background-position: -5px -286px;
+          background-repeat: no-repeat;
+          overflow: hidden;
+          display: inline-block;
+          width: 5px;
+          height: 11px;
+          background-image: url('../images/sprite.png');
+          margin-left: 5px;
+          vertical-align: middle; }
+    .frame .afisha .afisha-photo:hover .afisha-detail {
+      display: block; }
+  .frame .afisha .info-line {
+    border-top: 1px solid #bababa; }
+    .frame .afisha .info-line address {
+      margin-left: 12px; }
+      .frame .afisha .info-line address:before {
+        margin-left: -20px;
+        margin-right: 10px; }
+  .frame .afisha .detail-content {
+    display: none; }

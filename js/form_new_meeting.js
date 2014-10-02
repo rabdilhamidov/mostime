@@ -4,9 +4,14 @@ $(function () {
   /*
   */
   $(document).ready(function () {
-  }).on('click', '', function (event) {
+  }).on('click', '#create-new-meeting', function (event) {
     event.preventDefault();
-  });
+    $('.overlay').fadeIn(300);
+    $('.popup#new-meeting').fadeIn(300);
+  }).on('click', '.search-result .big-close', function (event) {
+    event.preventDefault();
+    $(this).parent('li').fadeOut(300);
+  }).on('submit', 'form#new-meeting-form', form_new_meeting_handler);
 });
 // -------------
 function calendar_handler() {
@@ -42,4 +47,56 @@ function calendar_handler() {
 }
 function timepicker_handlers() {
   $('.timepicker').timepicker({ step: 60 });
+}
+// валидация форм
+var regsObj = {
+    EMAIL: /^[a-z0-9](?:[a-z0-9_\.-]*[a-z0-9])*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])*\.)+[a-z]{2,4}$/i,
+    TEL: /^[0-9 \,\;\-\+\(\)\[\]]+$/i,
+    EN_RU: /^[a-zA-Zа-яА-ЯёЁ _-]+$/i,
+    EN_RU_D: /^[a-zA-Zа-яА-ЯёЁ0-9 _-]+$/i,
+    DATE: /^[0-9 \.\/_-]+$/i,
+    ALL: /^[\s\S]+$/i
+  };
+// Валидация формы
+function form_new_meeting_handler(event) {
+  var form_data = {
+      name: $('input#name').val(),
+      place: $('input#place').val(),
+      date: $('input#date').val(),
+      time_from: $('input#time-from').val(),
+      time_to: $('input#time-to').val(),
+      comment: $('textarea#comment').val()
+    };
+  var is_err = false;
+  $('span.err').hide();
+  if (!regsObj.EN_RU_D.test(form_data.name)) {
+    $('input#name').next('span.err').show();
+    is_err = true;
+  }
+  if (!regsObj.ALL.test(form_data.place)) {
+    $('input#place').next('span.err').show();
+    is_err = true;
+  }
+  if (!regsObj.DATE.test(form_data.date)) {
+    $('input#date').next('span.err').show();
+    is_err = true;
+  }
+  if (!regsObj.DATE.test(form_data.time_from) && form_data.time_to == ':') {
+    $('input#time-to').next('span.err').show();
+    is_err = true;
+  }
+  if (!regsObj.DATE.test(form_data.time_to) && form_data.time_to == ':') {
+    $('input#time_to').next('span.err').show();
+    is_err = true;
+  }
+  if (!regsObj.ALL.test(form_data.comment)) {
+    $('textarea#comment').next('span.err').show();
+    is_err = true;
+  }
+  if (is_err) {
+    event.preventDefault();
+  } else {
+    $('.overlay').fadeOut(300);
+    $('.popup#new-mess').fadeOut(300);
+  }
 }

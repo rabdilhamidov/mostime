@@ -1,37 +1,6 @@
 $(function () {
   // Слайдер 
   var pages_len = $('.pager li.page').length;
-  // валидация форм
-  var regsObj = {
-      EMAIL: /^[a-z0-9](?:[a-z0-9_\.-]*[a-z0-9])*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])*\.)+[a-z]{2,4}$/i,
-      TEL: /^[0-9 \,\;\-\+\(\)\[\]]+$/i,
-      EN_RU: /^[a-zA-Zа-яА-ЯёЁ _-]+$/i,
-      EN_RU_D: /^[a-zA-Zа-яА-ЯёЁ0-9 _-]+$/i,
-      ALL: /^[\s\S]+$/i
-    };
-  // Валидация формы Новое сообщение
-  form_new_mess_handler = function (event) {
-    var form_data = {
-        who: $('input#who').val(),
-        mess: $('textarea#mess').val()
-      };
-    var is_err = false;
-    $('span.err').hide();
-    if (!regsObj.EN_RU_D.test(form_data.who)) {
-      $('input#who').next('span.err').show();
-      is_err = true;
-    }
-    if (!regsObj.ALL.test(form_data.mess)) {
-      $('textarea#mess').next('span.err').show();
-      is_err = true;
-    }
-    if (is_err) {
-      event.preventDefault();
-    } else {
-      $('.overlay').fadeOut(300);
-      $('.popup#new-mess').fadeOut(300);
-    }
-  };
   /*
   ***
   */
@@ -88,10 +57,14 @@ $(function () {
   }).on('click', 'a.popup-close', function (event) {
     event.preventDefault();
     $('.overlay').fadeOut(300);
-    $('.popup#new-mess').fadeOut(300);
-  }).on('click', '#create-new-mess', function (event) {
+    $('.popup').fadeOut(300);
+  }).on('click', '.afisha-photo', function (event) {
     event.preventDefault();
     $('.overlay').fadeIn(300);
-    $('.popup#new-mess').fadeIn(300);
-  }).on('submit', 'form#new-mess', form_new_mess_handler);
+    $('.popup#afisha-detail').fadeIn(300);
+    var content = $(this).parent().find('.detail-content').html();
+    $('.popup-content').html('');
+    $('.popup-content').append(content);
+  });
+  ;
 });

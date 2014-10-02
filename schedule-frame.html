@@ -97,29 +97,35 @@
             <span class="err">Необходимо ввести корректный текст</span>
           </li>
           <li>
-            <label for="time">Дата</label>
+            <label for="date">Дата</label>
             <input id="date" name="date" type="text" placeholder="" value="">
+            <span class="err">Необходимо ввести корректную дату</span>
           </li>
           <li>
-            <label for="time">Время</label>
+            <label for="time-from">Время</label>
               с&ensp;<input class="timepicker" id="time-from" name="time-from" type="text" data-time-format="H:i" placeholder="" value=":">&emsp;
-              по&ensp;<input class="timepicker" id="time-from" name="time-from" type="text" data-time-format="H:i" placeholder="" value=":">
+              по&ensp;<input class="timepicker" id="time-to" name="time-to" type="text" data-time-format="H:i" placeholder="" value=":">
+              <span class="time err">Необходимо ввести корректное время</span>
           </li>
           <li>
               <label for="members">Участники</label>
               <div class="search-wrapper">
                 <input id="members" placeholder="Поиск" type="search">
-                <div class="search-result">
-                  <div class="avatar"><img src="images/avatar-01.jpg" alt="avatar"></div>
-                  <p>Леонид Матвеевич Казанцев</p>
-                  <a href="#" class="big-close"></a>
-                </div>
+              </div>
+              <div class="search-result">
+                <ul>
+                  <li>
+                    <div class="avatar"><img src="images/avatar-01.jpg" alt="avatar"></div>
+                    <p>Леонид Матвеевич Казанцев</p>
+                    <a href="#" class="big-close"></a>
+                  </li>
+                </ul>
               </div>
           </li>
           <li>
             <label for="comment">Комментарий</label>
             <textarea name="comment" id="comment" cols="30" rows="10" placeholder=""></textarea>
-            <span class="err">Поле обязательно для заполнения</span>
+            <span class="err">Необходимо ввести корректный текст</span>
           </li>
         </ul>
     </div>
