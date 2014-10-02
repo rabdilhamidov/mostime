@@ -557,7 +557,8 @@ ul {
   width: 156px;
   padding: 20px 10px 10px; }
   .frame .person .person-photo {
-    width: 135px; }
+    width: 135px;
+    cursor: pointer; }
     .frame .person .person-photo img {
       width: 100%; }
     .frame .person .person-photo:hover {
@@ -571,6 +572,8 @@ ul {
       margin: 3px 0 2px; }
   .frame .person:hover {
     background: #e3e3e3; }
+  .frame .person .detail-content {
+    display: none; }
 
 .frame ul.messages {
   border-bottom: 1px solid #e3e3e3; }
@@ -693,37 +696,54 @@ ul {
       margin-top: 7px; }
     .popup .search-result ul li a.big-close {
       float: right; }
-  .popup#afisha-detail {
+  .popup#afisha-detail, .popup#person-detail {
     width: 660px;
     margin-left: -330px;
     background-color: #e3e3e3;
     padding-top: 10px; }
-    .popup#afisha-detail .popup-content {
+    .popup#afisha-detail .popup-content, .popup#person-detail .popup-content {
       vertical-align: top; }
-      .popup#afisha-detail .popup-content .left {
+      .popup#afisha-detail .popup-content .left, .popup#person-detail .popup-content .left {
         float: left;
         display: inline-block;
         width: 200px; }
-        .popup#afisha-detail .popup-content .left img {
+        .popup#afisha-detail .popup-content .left img, .popup#person-detail .popup-content .left img {
           width: 100%; }
-      .popup#afisha-detail .popup-content .right {
+      .popup#afisha-detail .popup-content .right, .popup#person-detail .popup-content .right {
         display: inline-block;
         width: 400px; }
-        .popup#afisha-detail .popup-content .right h3 {
+        .popup#afisha-detail .popup-content .right h3, .popup#person-detail .popup-content .right h3 {
           font-size: 20px; }
-    .popup#afisha-detail .info-line {
+    .popup#afisha-detail .info-line, .popup#person-detail .info-line {
       border-bottom: 1px solid #bababa; }
-      .popup#afisha-detail .info-line address {
+      .popup#afisha-detail .info-line address, .popup#person-detail .info-line address {
         margin-left: -10px;
         margin-right: 15px; }
-      .popup#afisha-detail .info-line span {
+      .popup#afisha-detail .info-line span, .popup#person-detail .info-line span {
         margin-right: 15px;
         margin-left: 0px; }
-    .popup#afisha-detail .afisha-text {
+    .popup#afisha-detail .afisha-text, .popup#person-detail .afisha-text {
       margin-top: 10px; }
-    .popup#afisha-detail .popup-footer {
+    .popup#afisha-detail .popup-footer, .popup#person-detail .popup-footer {
       border-top: 1px solid #bababa;
       padding-top: 10px; }
+  .popup#person-detail .popup-content .left {
+    width: 200px;
+    height: 245px; }
+    .popup#person-detail .popup-content .left img {
+      width: 100%; }
+  .popup#person-detail .popup-content .right {
+    width: 400px; }
+  .popup#person-detail .popup-content .person-text {
+    margin-top: 10px;
+    height: 140px;
+    overflow: auto; }
+  .popup#person-detail .popup-content .popup-close {
+    display: block;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #bababa;
+    text-align: right; }
 
 .frame ul.messages.chat li .avatar {
   width: 43px;

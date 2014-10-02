@@ -65,6 +65,15 @@ $(function () {
     var content = $(this).parent().find('.detail-content').html();
     $('.popup-content').html('');
     $('.popup-content').append(content);
+  }).on('click', '.person-photo', function (event) {
+    event.preventDefault();
+    var content = $(this).parent().find('.detail-content').html();
+    if (content) {
+      $('.overlay').fadeIn(300);
+      $('.popup#person-detail').fadeIn(300);
+      $('.popup-content').html('');
+      $('.popup-content').append(content);
+    }
   });
   ;
 });
