@@ -9,6 +9,15 @@
   overflow: auto;
 }
 
+  #page.frame {
+    padding: 0;
+    margin: 0;
+  }
+
+    #page.frame .frame {
+      margin: 0;
+    }
+
   #page h1 {
     background: url(../images/header_bg.png) repeat-y;
     font-size: 15px;
@@ -1207,4 +1216,24 @@
 
   #page .cultural .program_time_place .time_place {
     top: 25px;
+  }
+
+.site-map {}
+
+  .site-map dl dt {
+    font: bold 14px 'PT Sans';
+  }
+
+  .site-map dl dd {
+    padding-left: 140px;
+  }
+
+    .site-map dl dd a {
+      display: inline-block;
+      line-height: 20px;
+      width: 30%;
+    }
+
+  .site-map dl dd + dt {
+    margin-top: 15px;
   }

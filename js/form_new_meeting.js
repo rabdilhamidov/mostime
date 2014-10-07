@@ -7,7 +7,7 @@ $(function () {
   }).on('click', '#create-new-meeting', function (event) {
     event.preventDefault();
     $('.overlay').fadeIn(300);
-    $('.popup#new-meeting').fadeIn(300);
+    $('.frame-popup#new-meeting').fadeIn(300);
   }).on('click', '.search-result .big-close', function (event) {
     event.preventDefault();
     $(this).parent('li').fadeOut(300);
@@ -97,6 +97,6 @@ function form_new_meeting_handler(event) {
     event.preventDefault();
   } else {
     $('.overlay').fadeOut(300);
-    $('.popup#new-mess').fadeOut(300);
+    $('.frame-popup#new-mess').fadeOut(300);
   }
 }

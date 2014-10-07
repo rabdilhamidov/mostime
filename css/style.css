@@ -249,8 +249,7 @@ a.frame-btn, button {
         height: 28px;
         background-image: url('../images/sprite.png'); }
 .frame .content-slider .slider-arrows {
-  margin-left: -40px;
-  margin-top: 209px; }
+  margin-left: -40px; }
 .frame .person-slider {
   margin: 30px 20px 0; }
   .frame .person-slider .slider-arrows {
@@ -425,7 +424,8 @@ ul {
       width: 18px;
       height: 18px;
       line-height: 16px;
-      cursor: pointer; }
+      cursor: pointer;
+      vertical-align: top; }
       .frame .pager ul li.first {
         border: 1px solid #e3e3e3; }
         .frame .pager ul li.first a {
@@ -558,6 +558,8 @@ ul {
   padding: 20px 10px 10px; }
   .frame .person .person-photo {
     width: 135px;
+    height: 135px;
+    overflow: hidden;
     cursor: pointer; }
     .frame .person .person-photo img {
       width: 100%; }
@@ -607,24 +609,24 @@ ul {
   top: 0;
   z-index: 2; }
 
-.popup {
+.frame-popup {
   display: none;
-  position: fixed;
+  position: absolute;
   top: 40px;
   left: 50%;
-  margin-left: -220px;
+  margin-left: -220px !important;
   width: 440px;
   background: #fff;
   z-index: 3; }
-  .popup .popup-title {
+  .frame-popup .popup-title {
     height: 43px;
     background: #e3e3e3;
     font-weight: bold;
     font-size: 14px;
     padding: 10px 20px 0; }
-    .popup .popup-title h4 {
+    .frame-popup .popup-title h4 {
       color: #606060; }
-      .popup .popup-title h4:before {
+      .frame-popup .popup-title h4:before {
         content: '';
         background-position: -5px -165px;
         background-repeat: no-repeat;
@@ -634,9 +636,9 @@ ul {
         height: 9px;
         background-image: url('../images/sprite.png');
         margin-right: 10px; }
-  .popup a {
+  .frame-popup a {
     color: #606060; }
-    .popup a.popup-close:after {
+    .frame-popup a.popup-close:after {
       content: '';
       background-position: -5px -265px;
       background-repeat: no-repeat;
@@ -647,40 +649,40 @@ ul {
       background-image: url('../images/sprite.png');
       vertical-align: -2px;
       margin-left: 10px; }
-  .popup .popup-content {
+  .frame-popup .popup-content {
     padding: 10px 20px 0; }
-    .popup .popup-content ul li {
+    .frame-popup .popup-content ul li {
       margin-top: 30px; }
-      .popup .popup-content ul li:first-child {
+      .frame-popup .popup-content ul li:first-child {
         margin-top: 15px; }
-      .popup .popup-content ul li label {
+      .frame-popup .popup-content ul li label {
         display: inline-block;
         vertical-align: top;
         width: 115px; }
-        .popup .popup-content ul li label + input, .popup .popup-content ul li label + textarea {
+        .frame-popup .popup-content ul li label + input, .frame-popup .popup-content ul li label + textarea {
           width: 280px; }
-        .popup .popup-content ul li label ~ .err {
+        .frame-popup .popup-content ul li label ~ .err {
           text-align: right;
           float: right;
           display: none; }
-  .popup .popup-footer {
+  .frame-popup .popup-footer {
     border-top: 1px solid #e3e3e3;
     margin-top: 20px;
     padding: 20px 20px;
     margin-bottom: 10px; }
-    .popup .popup-footer .left {
+    .frame-popup .popup-footer .left {
       width: 270px; }
-  .popup#new-meeting .popup-footer {
+  .frame-popup#new-meeting .popup-footer {
     margin-bottom: 30px; }
-  .popup .search-wrapper {
+  .frame-popup .search-wrapper {
     display: inline-block;
     width: 281px; }
-  .popup .search-result ul li {
+  .frame-popup .search-result ul li {
     margin-top: 50px;
     margin-left: 120px;
     height: 45px;
     border-bottom: 1px solid #e3e3e3; }
-    .popup .search-result ul li .avatar {
+    .frame-popup .search-result ul li .avatar {
       margin-top: 0px !important;
       width: 35px;
       height: 35px;
@@ -688,57 +690,58 @@ ul {
       display: inline-block;
       float: left;
       margin-right: 10px; }
-      .popup .search-result ul li .avatar img {
+      .frame-popup .search-result ul li .avatar img {
         width: 100%;
         margin-top: 0; }
-    .popup .search-result ul li p {
+    .frame-popup .search-result ul li p {
       display: inline-block;
       margin-top: 7px; }
-    .popup .search-result ul li a.big-close {
+    .frame-popup .search-result ul li a.big-close {
       float: right; }
-  .popup#afisha-detail, .popup#person-detail {
+  .frame-popup#afisha-detail, .frame-popup#person-detail {
     width: 660px;
-    margin-left: -330px;
+    margin-left: -330px !important;
     background-color: #e3e3e3;
     padding-top: 10px; }
-    .popup#afisha-detail .popup-content, .popup#person-detail .popup-content {
+    .frame-popup#afisha-detail .popup-content, .frame-popup#person-detail .popup-content {
+      padding: 10px 20px 0px;
       vertical-align: top; }
-      .popup#afisha-detail .popup-content .left, .popup#person-detail .popup-content .left {
+      .frame-popup#afisha-detail .popup-content .left, .frame-popup#person-detail .popup-content .left {
         float: left;
         display: inline-block;
         width: 200px; }
-        .popup#afisha-detail .popup-content .left img, .popup#person-detail .popup-content .left img {
+        .frame-popup#afisha-detail .popup-content .left img, .frame-popup#person-detail .popup-content .left img {
           width: 100%; }
-      .popup#afisha-detail .popup-content .right, .popup#person-detail .popup-content .right {
+      .frame-popup#afisha-detail .popup-content .right, .frame-popup#person-detail .popup-content .right {
         display: inline-block;
         width: 400px; }
-        .popup#afisha-detail .popup-content .right h3, .popup#person-detail .popup-content .right h3 {
+        .frame-popup#afisha-detail .popup-content .right h3, .frame-popup#person-detail .popup-content .right h3 {
           font-size: 20px; }
-    .popup#afisha-detail .info-line, .popup#person-detail .info-line {
+    .frame-popup#afisha-detail .info-line, .frame-popup#person-detail .info-line {
       border-bottom: 1px solid #bababa; }
-      .popup#afisha-detail .info-line address, .popup#person-detail .info-line address {
+      .frame-popup#afisha-detail .info-line address, .frame-popup#person-detail .info-line address {
         margin-left: -10px;
         margin-right: 15px; }
-      .popup#afisha-detail .info-line span, .popup#person-detail .info-line span {
+      .frame-popup#afisha-detail .info-line span, .frame-popup#person-detail .info-line span {
         margin-right: 15px;
         margin-left: 0px; }
-    .popup#afisha-detail .afisha-text, .popup#person-detail .afisha-text {
+    .frame-popup#afisha-detail .afisha-text, .frame-popup#person-detail .afisha-text {
       margin-top: 10px; }
-    .popup#afisha-detail .popup-footer, .popup#person-detail .popup-footer {
+    .frame-popup#afisha-detail .popup-footer, .frame-popup#person-detail .popup-footer {
       border-top: 1px solid #bababa;
       padding-top: 10px; }
-  .popup#person-detail .popup-content .left {
+  .frame-popup#person-detail .popup-content .left {
     width: 200px;
     height: 245px; }
-    .popup#person-detail .popup-content .left img {
+    .frame-popup#person-detail .popup-content .left img {
       width: 100%; }
-  .popup#person-detail .popup-content .right {
+  .frame-popup#person-detail .popup-content .right {
     width: 400px; }
-  .popup#person-detail .popup-content .person-text {
+  .frame-popup#person-detail .popup-content .person-text {
     margin-top: 10px;
     height: 140px;
     overflow: auto; }
-  .popup#person-detail .popup-content .popup-close {
+  .frame-popup#person-detail .popup-content .popup-close {
     display: block;
     margin-top: 10px;
     padding-top: 10px;
@@ -1042,36 +1045,37 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
   .frame .afisha:nth-child(3n) {
     margin-right: 0px; }
   .frame .afisha .afisha-photo {
+    width: 180px;
     height: 120px;
     overflow: hidden; }
     .frame .afisha .afisha-photo img {
       width: 100%; }
-    .frame .afisha .afisha-photo .afisha-detail {
-      width: 180px;
-      height: 120px;
-      background: rgba(130, 130, 130, 0.7);
-      margin-top: -124px;
-      position: relative;
-      text-align: center;
-      padding-top: 50px;
-      cursor: pointer;
-      display: none; }
-      .frame .afisha .afisha-photo .afisha-detail a {
-        color: #fff;
-        text-decoration: underline; }
-        .frame .afisha .afisha-photo .afisha-detail a:after {
-          content: '';
-          background-position: -5px -286px;
-          background-repeat: no-repeat;
-          overflow: hidden;
-          display: inline-block;
-          width: 5px;
-          height: 11px;
-          background-image: url('../images/sprite.png');
-          margin-left: 5px;
-          vertical-align: middle; }
-    .frame .afisha .afisha-photo:hover .afisha-detail {
-      display: block; }
+  .frame .afisha .afisha-detail {
+    width: 180px;
+    height: 120px;
+    background: rgba(130, 130, 130, 0.7);
+    margin-top: -120px;
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+    cursor: pointer;
+    display: none; }
+    .frame .afisha .afisha-detail a {
+      color: #fff;
+      text-decoration: underline; }
+      .frame .afisha .afisha-detail a:after {
+        content: '';
+        background-position: -5px -286px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: inline-block;
+        width: 5px;
+        height: 11px;
+        background-image: url('../images/sprite.png');
+        margin-left: 5px;
+        vertical-align: middle; }
+  .frame .afisha:hover .afisha-detail {
+    display: block; }
   .frame .afisha .info-line {
     border-top: 1px solid #bababa; }
     .frame .afisha .info-line address {

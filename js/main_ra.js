@@ -1,5 +1,11 @@
 $(function () {
   // Слайдер 
+  // Положение управляющих стрелок
+  if ($('div').is('.person-slider') == false && $('ul').is('.bxslider')) {
+    var slider_h = $('.content-slider').height();
+    var slider_arr_h = $('.slider-arrows').height();
+    $('.slider-arrows').css({ 'margin-top': slider_h * 0.5 - slider_arr_h * 0.5 + 8 });
+  }
   var pages_len = $('.pager li.page').length;
   /*
   ***
@@ -12,6 +18,7 @@ $(function () {
     $(this).next('span.loaded-file').text($(this).val());
     $('a.load-file').text('\u041f\u0440\u0438\u043a\u0440\u0435\u043f\u0438\u0442\u044c \u0434\u0440\u0443\u0433\u043e\u0439 \u0444\u0430\u0439\u043b');
   }).on('click', '.slider-arrows a', function (event) {
+    // alert($('.content-slider').height());
     event.preventDefault();
     $(this).hasClass('prev') && frame_slider.goToPrevSlide();
     $(this).hasClass('next') && frame_slider.goToNextSlide();
@@ -45,11 +52,11 @@ $(function () {
   }).on('click', 'a.popup-close', function (event) {
     event.preventDefault();
     $('.overlay').fadeOut(300);
-    $('.popup').fadeOut(300);
-  }).on('click', '.afisha-photo', function (event) {
+    $('.frame-popup').fadeOut(300);
+  }).on('click', '.afisha-detail', function (event) {
     event.preventDefault();
     $('.overlay').fadeIn(300);
-    $('.popup#afisha-detail').fadeIn(300);
+    $('.frame-popup#afisha-detail').fadeIn(300);
     var content = $(this).parent().find('.detail-content').html();
     $('.popup-content').html('');
     $('.popup-content').append(content);
@@ -58,7 +65,7 @@ $(function () {
     var content = $(this).parent().find('.detail-content').html();
     if (content) {
       $('.overlay').fadeIn(300);
-      $('.popup#person-detail').fadeIn(300);
+      $('.frame-popup#person-detail').fadeIn(300);
       $('.popup-content').html('');
       $('.popup-content').append(content);
     }

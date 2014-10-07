@@ -5,7 +5,7 @@ $(function () {
   }).on('click', '#create-new-mess', function (event) {
     event.preventDefault();
     $('.overlay').fadeIn(300);
-    $('.popup#new-mess').fadeIn(300);
+    $('.frame-popup#new-mess').fadeIn(300);
   }).on('submit', 'form#new-mess', form_new_mess_handler);
 });
 // -------------
@@ -38,6 +38,6 @@ function form_new_mess_handler(event) {
     event.preventDefault();
   } else {
     $('.overlay').fadeOut(300);
-    $('.popup#new-mess').fadeOut(300);
+    $('.frame-popup#new-mess').fadeOut(300);
   }
 }
