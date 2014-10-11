@@ -255,6 +255,8 @@ a.frame-btn, button {
   .frame .person-slider .slider-arrows {
     margin-left: -20px;
     margin-top: 20px; }
+.frame.site .slider-arrows {
+  width: 1000px; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -271,6 +273,8 @@ ul {
   background: #fff;
   margin: 40px auto 0;
   color: #606060; }
+  .frame.site {
+    width: 1000px; }
   .frame .left {
     display: inline-block;
     height: 100%; }
@@ -436,7 +440,8 @@ ul {
           width: 11px;
           height: 9px;
           background-image: url('../images/sprite.png');
-          vertical-align: 1px; }
+          vertical-align: 1px;
+          margin-top: 4px; }
       .frame .pager ul li.prev {
         border: 1px solid #e3e3e3;
         margin-right: 10px; }
@@ -448,7 +453,8 @@ ul {
           width: 6px;
           height: 9px;
           background-image: url('../images/sprite.png');
-          vertical-align: 1px; }
+          vertical-align: 1px;
+          margin-top: 4px; }
       .frame .pager ul li.next {
         border: 1px solid #e3e3e3;
         margin-left: 10px; }
@@ -460,7 +466,8 @@ ul {
           width: 6px;
           height: 9px;
           background-image: url('../images/sprite.png');
-          vertical-align: 1px; }
+          vertical-align: 1px;
+          margin-top: 4px; }
       .frame .pager ul li.last {
         border: 1px solid #e3e3e3; }
         .frame .pager ul li.last a {
@@ -471,7 +478,8 @@ ul {
           width: 11px;
           height: 9px;
           background-image: url('../images/sprite.png');
-          vertical-align: 1px; }
+          vertical-align: 1px;
+          margin-top: 4px; }
       .frame .pager ul li:hover, .frame .pager ul li.active {
         background: #e3e3e3;
         color: #606060;
@@ -502,10 +510,7 @@ ul {
         border-bottom: 3px solid #606060; }
   .frame .title ul.schedule {
     width: 80%;
-    text-align: right;
     display: inline-block; }
-    .frame .title ul.schedule li:last-child {
-      border-right: 0 none; }
 .frame .time-period {
   margin-top: 20px; }
   .frame .time-period h3 {
@@ -576,6 +581,9 @@ ul {
     background: #e3e3e3; }
   .frame .person .detail-content {
     display: none; }
+.frame.site .person {
+  width: 185px;
+  padding: 20px 25px 10px; }
 
 .frame ul.messages {
   border-bottom: 1px solid #e3e3e3; }
@@ -1085,3 +1093,7 @@ li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover 
         margin-right: 10px; }
   .frame .afisha .detail-content {
     display: none; }
+.frame.site .afisha {
+  margin-right: 20%; }
+  .frame.site .afisha:nth-child(3n) {
+    margin-right: 0px; }
