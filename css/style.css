@@ -256,7 +256,7 @@ a.frame-btn, button {
     margin-left: -20px;
     margin-top: 20px; }
 .frame.site .slider-arrows {
-  width: 1000px; }
+  width: 960px; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -274,7 +274,7 @@ ul {
   margin: 40px auto 0;
   color: #606060; }
   .frame.site {
-    width: 1000px; }
+    width: 960px; }
   .frame .left {
     display: inline-block;
     height: 100%; }
@@ -409,14 +409,7 @@ ul {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px; }
-  .frame .flags {
-    width: 26px;
-    height: 16px;
-    display: block; }
-    .frame .flags img {
-      width: 100%; }
   .frame img {
-    border: 1px solid #e3e3e3;
     margin-top: 0; }
   .frame .pager {
     margin-top: 20px;
@@ -565,7 +558,9 @@ ul {
     width: 135px;
     height: 135px;
     overflow: hidden;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #e3e3e3;
+    border: 1px solid #e3e3e3; }
     .frame .person .person-photo img {
       width: 100%; }
     .frame .person .person-photo:hover {
@@ -581,6 +576,13 @@ ul {
     background: #e3e3e3; }
   .frame .person .detail-content {
     display: none; }
+  .frame .person .flag {
+    width: 26px;
+    height: 16px;
+    display: block;
+    background-color: #e3e3e3; }
+    .frame .person .flag img {
+      width: 100%; }
 .frame.site .person {
   width: 185px;
   padding: 20px 25px 10px; }
