@@ -1,8 +1,14 @@
 $(function () {
   // Слайдер 
   // Положение управляющих стрелок
-  if ($('div').is('.person-slider') == false && $('ul').is('.bxslider')) {
-    var slider_h = $('.content-slider').height();
+  if ($('ul').is('.bxslider')) {
+    var slider_h;
+    if ($('div').is('.participants')) {
+      slider_h = $('.participants').height();
+    }
+    if ($('div').is('.content-slider')) {
+      slider_h = $('.content-slider').height();
+    }
     var slider_arr_h = $('.slider-arrows').height();
     $('.slider-arrows').css({ 'margin-top': slider_h * 0.5 - slider_arr_h * 0.5 + 8 });
   }

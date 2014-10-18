@@ -252,11 +252,54 @@ a.frame-btn, button {
   margin-left: -40px; }
 .frame .person-slider {
   margin: 30px 20px 0; }
+  .frame .person-slider .person {
+    width: 156px;
+    padding: 20px 10px 10px; }
+    .frame .person-slider .person .person-photo {
+      width: 100%;
+      height: 132px;
+      overflow: hidden;
+      cursor: pointer;
+      background-color: #e3e3e3;
+      border: 1px solid #e3e3e3; }
+      .frame .person-slider .person .person-photo img {
+        width: 100%; }
+      .frame .person-slider .person .person-photo:hover {
+        background: #e3e3e3; }
+    .frame .person-slider .person .person-text {
+      width: 100%;
+      font-size: 13px;
+      line-height: 18px;
+      margin-bottom: 5px; }
+      .frame .person-slider .person .person-text h4 {
+        margin: 3px 0 2px; }
+    .frame .person-slider .person:hover {
+      background: #e3e3e3; }
+    .frame .person-slider .person .detail-content {
+      display: none; }
+    .frame .person-slider .person .flag {
+      width: 26px;
+      height: 16px;
+      display: block;
+      background-color: #e3e3e3; }
+      .frame .person-slider .person .flag img {
+        width: 100%; }
   .frame .person-slider .slider-arrows {
     margin-left: -20px;
     margin-top: 20px; }
 .frame.site .slider-arrows {
-  width: 960px; }
+  width: 1000px; }
+.frame.site .person-slider .bxslider li {
+  padding-left: 10px; }
+.frame.site .person-slider.participants .bxslider li {
+  padding-left: 2px;
+  padding-right: 0px; }
+.frame.site .person-slider.participants .person {
+  display: inline-block;
+  width: 156px; }
+.frame.site .person {
+  width: 160px;
+  padding: 20px 12px 10px; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -274,7 +317,7 @@ ul {
   margin: 40px auto 0;
   color: #606060; }
   .frame.site {
-    width: 960px; }
+    width: 1000px; }
   .frame .left {
     display: inline-block;
     height: 100%; }
@@ -343,6 +386,9 @@ ul {
       .frame .content .head-block h3 {
         font-size: 15px;
         font-weight: normal; }
+      .frame .content .head-block.no-title h3 {
+        margin-top: 30px;
+        margin-bottom: 10px; }
     .frame .content .left {
       display: inline-block;
       width: 80%; }
@@ -550,42 +596,6 @@ ul {
       margin-left: 3%; }
     .frame .time-period.three-columns .info-block:last-child {
       float: right; }
-
-.frame .person {
-  width: 156px;
-  padding: 20px 10px 10px; }
-  .frame .person .person-photo {
-    width: 135px;
-    height: 135px;
-    overflow: hidden;
-    cursor: pointer;
-    background-color: #e3e3e3;
-    border: 1px solid #e3e3e3; }
-    .frame .person .person-photo img {
-      width: 100%; }
-    .frame .person .person-photo:hover {
-      background: #e3e3e3; }
-  .frame .person .person-text {
-    width: 135px;
-    font-size: 13px;
-    line-height: 18px;
-    margin-bottom: 5px; }
-    .frame .person .person-text h4 {
-      margin: 3px 0 2px; }
-  .frame .person:hover {
-    background: #e3e3e3; }
-  .frame .person .detail-content {
-    display: none; }
-  .frame .person .flag {
-    width: 26px;
-    height: 16px;
-    display: block;
-    background-color: #e3e3e3; }
-    .frame .person .flag img {
-      width: 100%; }
-.frame.site .person {
-  width: 185px;
-  padding: 20px 25px 10px; }
 
 .frame ul.messages {
   border-bottom: 1px solid #e3e3e3; }
