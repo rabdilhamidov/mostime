@@ -317,13 +317,14 @@ ul {
   margin: 0 !important;
   padding: 0 !important; }
 
+#page .frame.site {
+  margin-left: -20px; }
+
 .frame {
   width: 800px;
   background: #fff;
   margin: 40px auto 0;
   color: #606060; }
-  .frame.site {
-    width: 1000px; }
   .frame .left {
     display: inline-block;
     height: 100%; }
@@ -386,11 +387,13 @@ ul {
       margin-top: 7px; }
   .frame .content {
     margin-top: 40px; }
+    .frame .content.no-title {
+      margin-top: -40px; }
     .frame .content.title-2 {
       padding-left: 20px;
-      padding-right: 20px; }
+      padding-right: 20px;
+      margin-top: -30px; }
       .frame .content.title-2 h3 {
-        margin-top: 30px;
         margin-bottom: 20px; }
     .frame .content .head-block {
       border-bottom: 1px solid #e3e3e3;
@@ -407,6 +410,49 @@ ul {
       float: right; }
     .frame .content .text {
       margin-top: 7px; }
+    .frame .content.partners li {
+      margin-top: 40px; }
+    .frame .content.partners .partner-img {
+      width: 136px;
+      min-height: 136px;
+      display: inline-block;
+      background-color: #f4f4f4;
+      border: 1px solid #e3e3e3; }
+      .frame .content.partners .partner-img img {
+        width: 100%; }
+    .frame .content.partners .parnter-text {
+      width: 350px;
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 20px; }
+      .frame .content.partners .parnter-text h3 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px; }
+      .frame .content.partners .parnter-text h4 {
+        font-weight: 500;
+        font-style: italic;
+        color: #8a8a8a; }
+      .frame .content.partners .parnter-text a {
+        font-size: 13px;
+        color: #8a8a8a; }
+        .frame .content.partners .parnter-text a:before {
+          content: '› ';
+          font-size: 18px; }
+      .frame .content.partners .parnter-text .partner-description {
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
+        margin-top: 5px;
+        padding-top: 10px;
+        padding-bottom: 15px; }
+        .frame .content.partners .parnter-text .partner-description h5 {
+          margin-top: 20px;
+          font-size: 13px;
+          font-style: italic;
+          font-weight: 500; }
+        .frame .content.partners .parnter-text .partner-description p {
+          margin: 0;
+          padding: 0; }
   .frame .frame-footer {
     background-color: #f4f4f4;
     padding: 16px 20px; }
@@ -542,6 +588,10 @@ ul {
     font-size: smaller; }
   .frame .clx {
     clear: both; }
+  .frame.site {
+    width: 1000px; }
+    .frame.site .content.partners .parnter-text {
+      width: 540px; }
 
 .frame .title ul {
   text-align: center; }
